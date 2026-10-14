@@ -1,0 +1,2 @@
+# Lista de librerías que la plataforma instala para correr la app.
+streamlit
