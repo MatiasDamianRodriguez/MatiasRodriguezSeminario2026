@@ -1,7 +1,8 @@
 // Habla con la API: manda los datos a /predecir con fetch y
 //  devuelve el código de estado y el JSON recibido.
 
-const API_URL = "http://127.0.0.1:8000";
+// Dirección de la API publicada en Render (sin barra final).
+const API_URL = "https://matiasrodriguezseminario2026.onrender.com";
 
 async function llamarPredecir(datos) {
   const respuesta = await fetch(`${API_URL}/predecir`, {
