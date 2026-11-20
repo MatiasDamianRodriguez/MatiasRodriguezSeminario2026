@@ -6,10 +6,15 @@ from rutas.prediccion import router as router_prediccion
 
 app = FastAPI(title="API Iris")
 
-# Permite que el frontend en otro dominio llame a la API; en producción reemplazá "*" por la URL de tu frontend.
+ORIGENES_PERMITIDOS = [
+    "https://matiasdamianrodriguez.github.io",
+    "http://127.0.0.1:5500",
+    "http://localhost:5500",
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=ORIGENES_PERMITIDOS,
     allow_methods=["*"],
     allow_headers=["*"],
 )
