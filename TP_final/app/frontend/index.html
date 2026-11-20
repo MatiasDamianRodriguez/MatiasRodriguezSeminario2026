@@ -1,0 +1,38 @@
+<!-- Página con el formulario de las 4 medidas y la zona donde se muestra el resultado o el error. -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clasificador de Iris</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <main>
+    <h1>Clasificador de Iris</h1>
+    <p>Ingresá las medidas de la flor (en cm) y el modelo predice su especie.</p>
+
+    <form id="formulario">
+      <label>Largo del sépalo
+        <input type="number" step="0.1" id="largo_sepalo" required>
+      </label>
+      <label>Ancho del sépalo
+        <input type="number" step="0.1" id="ancho_sepalo" required>
+      </label>
+      <label>Largo del pétalo
+        <input type="number" step="0.1" id="largo_petalo" required>
+      </label>
+      <label>Ancho del pétalo
+        <input type="number" step="0.1" id="ancho_petalo" required>
+      </label>
+      <button type="submit">Predecir</button>
+    </form>
+
+    <div id="resultado" hidden></div>
+  </main>
+
+  <!-- cliente.js va antes porque script.js usa su función -->
+  <script src="cliente.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
